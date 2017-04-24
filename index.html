@@ -1,7 +1,14 @@
-<iframe src="https://athdot.github.io/home/" id="myvideo"></iframe>
-<script>
-var elem = document.getElementById("myvideo");
-if(elem.requestFullscreen) {
-  elem.requestFullscreen();
+<iframe src="https://athdot.github.io/home/" id="player"></iframe>
+<button onclick="goFullscreen('player'); return false">
+  View Fullscreen!
+</button>
+<script type="text/javascript">
+function goFullscreen(id) {
+  var element = document.getElementById(id);       
+  if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if (element.webkitRequestFullScreen) {
+    element.webkitRequestFullScreen();
+  }  
 }
 </script>
