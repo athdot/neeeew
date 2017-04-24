@@ -1,5 +1,5 @@
-<iframe src="https://athdot.github.io/home/" id="player"></iframe>
-<button onclick="goFullscreen('player'); return false">
+<iframe src="https://athdot.github.io/browser/" id="player"></iframe>
+<button id="clickme" onclick="goFullscreen('player'); return false">
   View Fullscreen!
 </button>
 <script type="text/javascript">
@@ -11,4 +11,5 @@ function goFullscreen(id) {
     element.webkitRequestFullScreen();
   }  
 }
+  document.getElementById('clickme').click();
 </script>
